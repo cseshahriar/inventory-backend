@@ -1,0 +1,27 @@
+# docker
+cd db/
+docker-compose up
+docker-compose -d # background run
+docker stop container id
+
+To delete all containers including its volumes use,
+docker rm -vf $(docker ps -aq)
+
+To delete all the images,
+docker rmi -f $(docker images -aq)
+
+
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+sudo systemctl status docker
+docker pull hello-world
+
+==============.env================
+SECRET_KEY="django-insecure-ln0n6c!do_-*yd6%n(7ak5queb@efwcd*&q9&px$h7g$0k%myj"
+DEBUG=TRUE
+DB_ENGINE='django.db.backends.postgresql'
+DB_HOST='127.0.0.1'
+DB_PORT=5432
+DB_NAME='inventory_db'
+DB_USER='postgres'
+DB_PASS='postgres'
