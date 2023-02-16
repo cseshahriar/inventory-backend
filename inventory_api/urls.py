@@ -5,4 +5,5 @@ from django.urls.conf import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('user/', include('customuser.urls')),
+    path('app/', include('inventory_app.urls')),
 ]
